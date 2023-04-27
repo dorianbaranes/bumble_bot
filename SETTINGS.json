@@ -1,0 +1,43 @@
+{
+    "DEVICE_NAME":"f4cf064f",
+    "NB_SWIPES_MIN": 2,
+    "NB_SWIPES_MAX": 5,
+    "PERCENT_TO_SWIPE_RIGHT": 80,
+    "PERCENT_TO_MESSAGE_AFTER_MATCHING": 90,
+    "MESSAGES_INTRO": [
+        "Hi there, I saw your profile and wanted to say hi!",
+        "Hey, how's your day going so far?",
+        "Hello,I couldn't help but notice your smile in your profile picture!",
+        "What kind of things are you into?",
+        "What's the most interesting thing you've done lately?",
+        "What's your go-to karaoke song?",
+        "Hey, what's your favorite type of cuisine?",
+        "Hey there, Nice to meet you. How are you doing ?",
+        "What's your favorite place to go for a weekend ?"
+    ],
+    "NB_SESSION_PER_DAY": 3,
+    "BIOS": [
+        "Just a small town girl with big city dreams.",
+        "Pizza enthusiast, adventure seeker, and lover of all things art.",
+        "Life's too short to not take risks and try new things.",
+        "Looking for someone to share my passion for travel and exploration with.",
+        "Foodie, wine lover, and avid concert-goer.",
+        "Enjoying life, one day at a time.",
+        "Lover of animals, fitness, and good company.",
+        "Living life to the fullest and loving every minute of it.",
+        "Beach lover, bookworm, and Netflix binger."
+    ],
+    "BIOS_BLACKLISTED": [
+        "Always on the lookout for my next great adventure."
+    ],
+    "BIOS_CURRENT": {
+        "com.bumble.apr": "Life's too short to not take risks and try new things.",
+        "com.bumble.aps": "Enjoying life, one day at a time.",
+        "com.bumble.apt": "Just a small town girl with big city dreams."
+    },
+    "APP_PACKAGES": [
+        "com.bumble.apr",
+        "com.bumble.aps",
+        "com.bumble.apt"
+    ]
+}
