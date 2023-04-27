@@ -1,5 +1,3 @@
-Sure, here's a sample README file for your project:
-
 # Bumble Bot
 
 This project automates swiping and messaging on the Bumble app using Appium.
