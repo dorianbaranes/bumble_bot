@@ -13,7 +13,7 @@ This project automates swiping and messaging on the Bumble app using Appium.
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/your_username/bumble-swiper.git`
+1. Clone the repository: `git clone https://github.com/dorianbaranes/bumble_bot`
 2. Navigate to the project directory: `cd bumble-swiper`
 3. Install the required packages: `pip install -r requirements.txt`
 4. Edit the `SETTINGS.json` file to your liking (see below)
