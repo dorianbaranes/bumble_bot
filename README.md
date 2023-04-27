@@ -14,7 +14,7 @@ This project automates swiping and messaging on the Bumble app using Appium.
 ## Installation
 
 1. Clone the repository: `git clone https://github.com/dorianbaranes/bumble_bot`
-2. Navigate to the project directory: `cd bumble-swiper`
+2. Navigate to the project directory: `cd bumble_bot`
 3. Install the required packages: `pip install -r requirements.txt`
 4. Edit the `SETTINGS.json` file to your liking (see below)
 5. From Android phone go to: Settings > Developer options and activate "Don't lock screen"
