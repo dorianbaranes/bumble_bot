@@ -136,7 +136,7 @@ def insert_text(driver, text):
             adb_command = ["adb", "-s",device_id, "shell", "input", "text", word.replace(' ','\ ')]
             # run the ADB command and capture the output
             subprocess.check_output(adb_command, universal_newlines=True)
-            time.sleep(1)
+            time.sleep(0.2)
 
 def scroll_down(driver):
         # Get the dimensions of the device screen

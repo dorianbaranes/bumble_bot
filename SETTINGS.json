@@ -1,5 +1,5 @@
 {
-    "DEVICE_NAME":"f4cf064f",
+    "DEVICE_NAME": "f4cf064f",
     "NB_SWIPES_MIN": 2,
     "NB_SWIPES_MAX": 5,
     "PERCENT_TO_SWIPE_RIGHT": 80,
@@ -17,23 +17,23 @@
     ],
     "NB_SESSION_PER_DAY": 3,
     "BIOS": [
-        "Just a small town girl with big city dreams.",
         "Pizza enthusiast, adventure seeker, and lover of all things art.",
-        "Life's too short to not take risks and try new things.",
         "Looking for someone to share my passion for travel and exploration with.",
         "Foodie, wine lover, and avid concert-goer.",
-        "Enjoying life, one day at a time.",
-        "Lover of animals, fitness, and good company.",
         "Living life to the fullest and loving every minute of it.",
         "Beach lover, bookworm, and Netflix binger."
     ],
     "BIOS_BLACKLISTED": [
-        "Always on the lookout for my next great adventure."
+        "Always on the lookout for my next great adventure.",
+        "Life's too short to not take risks and try new things.",
+        "Enjoying life, one day at a time.",
+        "Lover of animals, fitness, and good company.",
+        "Just a small town girl with big city dreams."
     ],
     "BIOS_CURRENT": {
-        "com.bumble.apr": "Life's too short to not take risks and try new things.",
-        "com.bumble.aps": "Enjoying life, one day at a time.",
-        "com.bumble.apt": "Just a small town girl with big city dreams."
+        "com.bumble.apr": "Looking for someone to share my passion for travel and exploration with.",
+        "com.bumble.aps": "Just a small town girl with big city dreams.",
+        "com.bumble.apt": "Living life to the fullest and loving every minute of it."
     },
     "APP_PACKAGES": [
         "com.bumble.apr",

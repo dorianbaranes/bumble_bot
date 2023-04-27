@@ -55,9 +55,14 @@ class BumbleSession:
         logger.info(f"Swipe to {direction.value}")
         # time.sleep(5)
         logger.info("Search for profile to swipe")
-        self.driver.find_element(
-            AppiumBy.ID, f"{self.app_package}:id/discovery_screen_container"
-        )
+        while True:
+            try:
+                self.driver.find_element(
+                    AppiumBy.ID, f"{self.app_package}:id/discovery_screen_container"
+                )
+                break
+            except:
+                self.check_unexpected_events()
 
         # Get the dimensions of the device screen
         screen_width = self.driver.get_window_size()["width"]
@@ -172,6 +177,14 @@ class BumbleSession:
         except:
             pass
 
+        try:
+            self.driver.find_element(
+                by=AppiumBy.XPATH, value='//*[@text="You have a new match"]'
+            )
+            self.driver.back()
+        except:
+            pass
+
 
 
         while True:
@@ -216,9 +229,10 @@ class BumbleSession:
                 scroll_down(self.driver)
 
         bio_value = bio.get_attribute("text")
-        logger.info(f'Current Bio is not removed:{bio_value}')
+
 
         if bio_value == 'A little bit about you...':  # the bio has been removed
+            logger.info(f'Current Bio is  removed:{SETTINGS["BIOS_CURRENT"][self.app_package]}')
             if SETTINGS['BIOS_CURRENT'][self.app_package]:
                 logger.info(f'Bio has been blacklisted:{SETTINGS["BIOS_CURRENT"][self.app_package]}')
                 SETTINGS['BIOS_BLACKLISTED'].append(SETTINGS['BIOS_CURRENT'][self.app_package])
@@ -226,7 +240,6 @@ class BumbleSession:
                     SETTINGS["BIOS"].remove(SETTINGS['BIOS_CURRENT'][self.app_package])
                 except ValueError:
                     pass
-
 
 
             bio.click()
@@ -240,6 +253,8 @@ class BumbleSession:
             self.driver.find_element(
                 by=AppiumBy.ID, value=f"{self.app_package}:id/navbar_right_icon_image"
             ).click()
+        else:
+            logger.info(f'Current Bio is not removed:{bio_value}')
 
 
         logger.info(
@@ -255,6 +270,16 @@ class BumbleSession:
             # random_direction = random.choice(list(SwipeDirection))
             random_direction = SwipeDirection.RIGHT if self.should_swipe_right() else SwipeDirection.LEFT
             self.swipe(random_direction)
+            try:
+                self.driver.find_element(
+                    AppiumBy.ID, f"{self.app_package}:id/discovery_screen_container"
+                )
+                logger.info("This is not a match")
+                continue
+            except:
+                pass
+
+
             self.check_unexpected_events()
             if self.is_matched():
                 if self.should_send_message():
